@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="BlazorChat\bin\**" />
+    <Compile Remove="BlazorChat\obj\**" />
+    <Content Remove="BlazorChat\bin\**" />
+    <Content Remove="BlazorChat\obj\**" />
+    <EmbeddedResource Remove="BlazorChat\bin\**" />
+    <EmbeddedResource Remove="BlazorChat\obj\**" />
+    <None Remove="BlazorChat\bin\**" />
+    <None Remove="BlazorChat\obj\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.3" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BlazorChat\" />
+  </ItemGroup>
+</Project>
+
