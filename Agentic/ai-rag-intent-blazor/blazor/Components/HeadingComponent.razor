@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+
+@inject IConfiguration config
+
+<header class="header" role="banner">
+    <div class="headerRoot">
+        <div class="innerHeaderRoot">
+            <img src="/assets/Contoso.svg" class="headerIcon" aria-hidden="true">
+            <a class="headerTitleContainer" href="#/">
+                <h1 class="headerTitle">
+                    @config["CompanyName"]
+                </h1>
+            </a>
+        </div>
+    </div>
+</header>
+
+@code {
+    // private InputFile fileInput;
+
+
+    // private async Task HandleFileUpload(ChangeEventArgs e)
+    // {
+
+    // }
+
+    private async Task HandleFileSelected(ChangeEventArgs e)
+    {
+        var fileList = e.Value as IEnumerable<IBrowserFile>;
+        // selectedFile = fileList?.FirstOrDefault();
+    }
+
+    private async Task HandleFileUpload(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        if (file != null)
+        {
+            // Upload the file to Azure Blob Storage
+            // Implement Azure Blob Storage upload logic here
+            // For example:
+            // var blobServiceClient = new BlobServiceClient("<connection_string>");
+            // var blobContainerClient = blobServiceClient.GetBlobContainerClient("<container_name>");
+            // var blobClient = blobContainerClient.GetBlobClient("<blob_name>");
+            // await blobClient.UploadAsync(file.OpenReadStream(), true);
+
+            // Notify user about successful upload
+            Console.WriteLine("File uploaded successfully.");
+        }
+    }
+}
