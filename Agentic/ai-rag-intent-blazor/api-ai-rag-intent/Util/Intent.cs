@@ -19,7 +19,6 @@ namespace api_ai_rag_intent.Util
             chatHistory.AddSystemMessage($@"Return the intent of the user.The intent must be one of the following strings:
                     - sql: Use this intent to answer questions about customers, incidents, purchases, and sites
                     - home: Use this intent to manage the home lights and air conditioning temperature
-                    - sqlandhome: Use this intent to answer questions about customers, incidents, purchases, and sites and manage the home lights and air conditioning temperature
                     - not_found: Use this intent if you can't find a suitable answer     
             ");
 
